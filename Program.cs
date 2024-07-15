@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddDbContext<PassangerContext>(opt =>
+builder.Services.AddDbContext<PassengerContext>(opt =>
     opt.UseInMemoryDatabase("BookingDatabase"));
     
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

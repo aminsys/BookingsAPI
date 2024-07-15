@@ -1,10 +1,10 @@
 
 using System.ComponentModel.DataAnnotations;
 
-public class Passanger
+public class Passenger
 {
     [Key]
-    public long PassangerId { get; set; }
+    public long PassengerId { get; set; }
     public required string Name { get; set; }
     public required string PassportNumber { get; set; }
 

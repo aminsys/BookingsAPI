@@ -2,10 +2,10 @@ Use following booking numbers for testing:
 BDT394
 ABC001
 
-Return passanger passport details for a booking/ reservation:
+Return passenger passport details for a booking/ reservation:
 	- Assumptions:
 		-- REST API (JSON)
-		-- Passanger can't exist without a booking
-		-- *Booking can't be emtpy, hence create a booking when adding a passanger
+		-- Passenger can't exist without a booking
+		-- *Booking can't be emtpy, hence create a booking when adding a passenger
 		-- Save data in memory while application is alive + Seeding
-		-- Unique id: booking number for booking. Passanger ID for passangers
+		-- Unique id: booking number for booking. Passenger ID for passengers

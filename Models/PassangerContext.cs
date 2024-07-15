@@ -2,9 +2,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BookingsAPI.Models;
 
-public class PassangerContext : DbContext
+public class PassengerContext : DbContext
 {
-    public PassangerContext(DbContextOptions<PassangerContext> options)
+    public PassengerContext(DbContextOptions<PassengerContext> options)
         : base(options)
     {
         Database.EnsureCreated();
@@ -12,10 +12,10 @@ public class PassangerContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Passanger>().HasData(
-            new Passanger
+        modelBuilder.Entity<Passenger>().HasData(
+            new Passenger
             {
-                PassangerId = 100001,
+                PassengerId = 100001,
                 Name = "Kalle Karlsson",
                 BookingNumber = "BDT394",
                 Nationality = "Swedish",
@@ -24,9 +24,9 @@ public class PassangerContext : DbContext
                 IssuingCountry = "Sweden",
                 PassportNumber = "R394223-2"
             },
-            new Passanger
+            new Passenger
             {
-                PassangerId = 100002,
+                PassengerId = 100002,
                 Name = "Saturo Jotaro",
                 BookingNumber = "BDT394",
                 Nationality = "Japanese",
@@ -35,9 +35,9 @@ public class PassangerContext : DbContext
                 IssuingCountry = "Japan",
                 PassportNumber = "9302-2-JP"
             },
-            new Passanger
+            new Passenger
             {
-                PassangerId = 100003,
+                PassengerId = 100003,
                 Name = "Axel Kjällström",
                 BookingNumber = "BDT394",
                 Nationality = "Swedish",
@@ -46,9 +46,9 @@ public class PassangerContext : DbContext
                 IssuingCountry = "Sweden",
                 PassportNumber = "M29003-4"
             },
-            new Passanger
+            new Passenger
             {
-                PassangerId = 100004,
+                PassengerId = 100004,
                 Name = "Mustafa Qamar",
                 BookingNumber = "ABC001",
                 Nationality = "Saudi",
@@ -57,9 +57,9 @@ public class PassangerContext : DbContext
                 IssuingCountry = "KSA",
                 PassportNumber = "IE02342"
             },
-            new Passanger
+            new Passenger
             {
-                PassangerId = 100005,
+                PassengerId = 100005,
                 Name = "Batbayar Enkhbold",
                 BookingNumber = "ABC001",
                 Nationality = "Mangolian",
@@ -71,5 +71,5 @@ public class PassangerContext : DbContext
         );
     }
 
-    public DbSet<Passanger> Passanger { get; set; } = null!;
+    public DbSet<Passenger> Passenger { get; set; } = null!;
 }
